@@ -1,4 +1,4 @@
-# Contributing to senti-full-dashboard
+# Contributing to element-lite-starter-kit
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -274,11 +274,11 @@ To contribute your work:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/senti-full-dashboard %>
+   git clone https://github.com/<your-username>/element-lite-starter-kit %>
    # Navigate to the newly cloned directory
-   cd senti-full-dashboard
+   cd element-lite-starter-kit
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/sentiteam/senti-full-dashboard %>
+   git remote add upstream https://github.com/tjmonsi/element-lite-starter-kit %>
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
