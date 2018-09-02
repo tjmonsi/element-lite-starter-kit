@@ -1,5 +1,5 @@
 const template = (html, self) => function () {
-  const { navigation, user, logout } = this;
+  const { navigation } = this;
   return html`
     <nav class="header-navigation">
       <ul class="navigation-list">
@@ -10,13 +10,6 @@ const template = (html, self) => function () {
             </a>
           </li>
         `)}
-        ${user ? html`
-          <li class="navigation-item">
-            <a class="navigation-anchor" on-click=${logout.bind(this)}>
-              Logout
-            </a>
-          </li>
-        ` : ''}
       </ul>
     </nav>
   `;
