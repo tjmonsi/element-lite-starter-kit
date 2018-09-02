@@ -6,7 +6,7 @@ const template = (html, self) => function () {
         ${navigation.map(i => html`
           <li
             class$="side-navigation-item ${locationId === i.label.toLowerCase() ? 'active' : ''}"
-            on-click=${closeSidebar.bind(this)}>
+            @click="${closeSidebar.bind(this)}">
 
             <a href="${i.href}" class="side-navigation-anchor">
               ${i.label}

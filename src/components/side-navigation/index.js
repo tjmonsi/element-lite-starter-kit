@@ -15,7 +15,7 @@ class Component extends TemplateLite(HTMLElement) {
   }
 
   get navigation () {
-    return this.__navigation;
+    return this.__navigation || [];
   }
 
   template () {
