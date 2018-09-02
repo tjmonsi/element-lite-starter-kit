@@ -6,15 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "npm-run-all": "./node_modules/.bin/npm-run-all --parallel",
+    "compile": "node compiler",
     "compile-watch": "node compiler --dev --watch",
     "superstatic-dev": "./node_modules/.bin/superstatic -c superstatic.json public",
     "superstatic-dev-c9": "./node_modules/.bin/superstatic -c superstatic.json public --port $PORT --host $IP",
     "webpack-dev": "./node_modules/.bin/webpack --env.BROWSERS=module --mode=development --watch",
+    "webpack-prod": "./node_modules/.bin/webpack --mode=production",
+    "webpack-prod-module": "./node_modules/.bin/webpack --mode=production --env.BROWSERS=module",
     "start-c9": "npm run npm-run-all --parallel compile-watch superstatic-dev-c9 webpack-dev",
     "serve": "node server",
     "start": "npm run npm-run-all compile-watch superstatic-dev webpack-dev",
     "workbox": "./node_modules/.bin/workbox generateSW workbox.config.js",
-    "prod": "NODE_ENV=production && node compiler && ./node_modules/.bin/webpack --mode=production && ./node_modules/.bin/webpack --mode=production --env.BROWSERS=module && node compiler && npm run workbox"
+    "prod": "NODE_ENV=production && rm -r public && ./node_modules/.bin/npm-run-all compile webpack-prod webpack-prod-module compile workbox"
   },
   "repository": {
     "type": "git",
