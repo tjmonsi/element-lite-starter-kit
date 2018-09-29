@@ -1,9 +1,10 @@
 {
   "name": "element-lite-starter-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Element Lite Starter Kit",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./delete.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "npm-run-all": "./node_modules/.bin/npm-run-all --parallel",
     "compile": "node compiler",
@@ -31,7 +32,7 @@
   "homepage": "https://github.com/tjmonsi/element-lite-starter-kit#readme",
   "dependencies": {
     "@littleq/core-lite": "0.0.5",
-    "@littleq/element-lite": "^0.3.2",
+    "@littleq/element-lite": "^0.3.6",
     "@webcomponents/shadycss": "^1.5.0",
     "@webcomponents/webcomponentsjs": "2.1.1",
     "es5-shim": "^4.5.10",

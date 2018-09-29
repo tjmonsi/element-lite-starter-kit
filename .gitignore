@@ -62,3 +62,5 @@ typings/
 
 # public build
 public
+
+.DS_Store
