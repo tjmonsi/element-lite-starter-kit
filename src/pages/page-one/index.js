@@ -2,11 +2,10 @@ import { TemplateLite } from '@littleq/element-lite/template-lite.js';
 import { render, html } from 'lit-html';
 import { template } from './template.js';
 import style from './style.styl';
-import '../../components/image-carousel';
 const { HTMLElement, customElements } = window;
 
 class Page extends TemplateLite(HTMLElement, style.toString()) {
-  static get is () { return 'page-home'; }
+  static get is () { return 'page-one'; }
 
   static get renderer () { return render; }
 
